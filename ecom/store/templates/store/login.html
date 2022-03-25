@@ -1,0 +1,23 @@
+{% extends 'store/main2.html' %}
+
+{% block content %}
+
+
+
+<div class="header-bar p-3" style="display:flex; justify-content: space-between;">
+    <h3>Login</h3>
+    <a style="margin-top: 13px; font-size:23px;" class="delete-link justify-content-end" href="{% url 'store' %}">&#215;</a>                  
+
+</div>
+
+<div class="px-4 py-2">
+    <form method="post">
+        {%csrf_token%}
+        {{ form.as_p }}
+        <input type="submit" class="button mb-1" name="" id="">
+    </form>
+    <p>Dont have an account? <a href="{% url 'register' %}">Register</a></p>
+
+</div>
+
+{% endblock content %}  
